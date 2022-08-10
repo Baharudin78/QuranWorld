@@ -1,5 +1,9 @@
 package com.baharudin.domain.model
 
+import androidx.room.Entity
+import java.io.Serializable
+
+@Entity(tableName = "chapter")
 data class Chapter(
     val bismillah_pre: Boolean,
     val id: Int,
@@ -11,4 +15,4 @@ data class Chapter(
     val revelation_place: String,
     val translated_name: TranslatedName,
     val verses_count: Int
-)
+) : Serializable
