@@ -1,18 +1,19 @@
 package com.baharudin.domain.model
 
 import androidx.room.Entity
+import com.baharudin.data.dto.TranslateName
+import com.google.gson.annotations.SerializedName
 import java.io.Serializable
 
 @Entity(tableName = "chapter")
 data class Chapter(
-    val bismillah_pre: Boolean,
+    val bismillahPre: Boolean,
     val id: Int,
-    val name_arabic: String,
-    val name_complex: String,
-    val name_simple: String,
-    val pages: List<Int>,
-    val revelation_order: Int,
-    val revelation_place: String,
-    val translated_name: TranslatedName,
-    val verses_count: Int
+    val nameArabic: String,
+    val nameComplex: String,
+    val nameSimple: String,
+    val revelationOrder: Int,
+    val revelationPlace: String,
+    val translatedName: TranslateName,
+    val versesCount: Int
 ) : Serializable

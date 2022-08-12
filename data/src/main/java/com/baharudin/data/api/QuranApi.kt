@@ -1,10 +1,9 @@
 package com.baharudin.data.api
 
-import com.baharudin.domain.model.ChapterResponse
-import retrofit2.Response
+import com.baharudin.data.dto.ChapterDto
 import retrofit2.http.GET
 
 interface QuranApi {
     @GET("api/v4/chapters")
-    suspend fun getAllChapter() : Response<ChapterResponse>
+    suspend fun getAllChapter() : List<ChapterDto>
 }
